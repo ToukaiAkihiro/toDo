@@ -1,9 +1,8 @@
 package android.kei1999.todo;
 
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.view.View;
-import android.widget.Adapter;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.EditText;
@@ -41,9 +40,9 @@ public class MainActivity extends AppCompatActivity {
                 int countNumber = listView.getCount();
                 if (countNumber == position) {
                     //goTo TopColumm(0)
-                    adapter.insert(item,0);
+                    adapter.insert(item, 0);
                 } else {
-                    adapter.insert(item,position+1);
+                    adapter.insert(item, position + 1);
                 }
             }
         });
@@ -61,11 +60,11 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
-    public void add (View v){
+    public void add(View v) {
 
-        if(editText.getText().toString().equals("")){
-            Toast.makeText(this,"文字が入力されていません", Toast.LENGTH_SHORT).show();
-        }else{
+        if (editText.getText().toString().equals("")) {
+            Toast.makeText(this, "文字が入力されていません", Toast.LENGTH_SHORT).show();
+        } else {
             String text = editText.getText().toString();
             Toast.makeText(this, text, Toast.LENGTH_SHORT).show();
 
